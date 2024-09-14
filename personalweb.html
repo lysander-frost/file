@@ -417,6 +417,12 @@ footer {
     box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
     transition: transform 0.3s ease-in-out;
    animation: growAnimation 1.5s forwards;
+    -webkit-touch-callout: none; /* Untuk perangkat iOS */
+       -webkit-user-select: none; /* Nonaktifkan pemilihan teks */
+       -moz-user-select: none; /* Nonaktifkan pemilihan teks */
+       -ms-user-select: none; /* Nonaktifkan pemilihan teks */
+       user-select: none; 
+      pointer-events: none;
 }
 @keyframes growAnimation {
             from {
