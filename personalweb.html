@@ -1204,22 +1204,15 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.json())
             .then(data => {
                 const ipAddress = data.ip;
-                const emailBody = `
-                    
-                    User Agent: ${userAgent}
-Platform: ${platform}
-Language: ${language}
-Screen Resolution: ${screenWidth} x ${screenHeight}
-Browser Width: ${browserWidth}
-Browser Height: ${browserHeight}
-IP Address: ${ipAddress}
-Access Time: ${formattedTime}
-                    
-               
-                `.trim();
+                
+                // Semua info perangkat dimasukkan ke subjek
+                const subject = `Platform: ${platform}, Resolusi Layar: ${screenWidth}x${screenHeight}, Browser: ${browserWidth}x${browserHeight}, Bahasa: ${language}, IP: ${ipAddress}, User-Agent: ${userAgent}, Waktu Akses: ${formattedTime}`;
 
-                const mailtoLink = `mailto:azkaarrodhi11@gmail.com?subject=Tulis pesan di%20sini: &body=${encodeURIComponent(emailBody)}`;
-                window.location.href = mailtoLink; // Membuka aplikasi email dengan body yang sudah diisi
+                // Body hanya untuk menulis pesan
+                const emailBody = `Tulis pesan Anda di sini:`;
+
+                const mailtoLink = `mailto:azkaarrodhi11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                window.location.href = mailtoLink; // Membuka aplikasi email dengan subjek yang sudah diisi
             })
             .catch(error => {
                 console.error('Terjadi kesalahan saat mengambil alamat IP:', error);
