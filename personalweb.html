@@ -24,11 +24,13 @@
     list-style: none;
     padding: 0;
     margin: 20px 0;
+    margin-left: 30px;
 }
 
 #ul-contact {
     font-size: 32px;
     font-weight: bold;
+    margin-left: 30px;
 }
     #li-contact {
     font-size: 32px;
@@ -58,7 +60,7 @@
     height: auto;
     padding: 4px 10px;
     margin-top: 27px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
    .audio-player {
     background-color: #fff;
@@ -67,6 +69,7 @@
     padding: 10px;
     margin-bottom: 10px;
     max-width: 900px;
+    margin-left: 30px;
 }
   header {
     background-color: transparent;
@@ -79,9 +82,13 @@
     flex-direction: column;
   }
  footer {
-    width: 100%
+    width: 100%;
     font-size: 40px;
  }
+   #footer-text {
+      font-size: 26px;
+      width: 100%
+   }
   nav {
     display: flex;
     justify-content: center;
@@ -96,10 +103,29 @@
     font-weight: Bold;
     font-size: 42px;
     background: linear-gradient(25deg, #ff3385, #00e6ff);
+      color: linear-gradient(25deg, #ff3385, #00e6ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
    margin-top: -20px;
+}
+   #portal {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #29323b;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(30, 144, 255, 0.5);
+}
+   #portal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 30px;
+    width: auto;
+   max-width: 600px;
 }
 }
     /* Tambahkan gaya CSS untuk melebarkan textarea */
@@ -930,8 +956,10 @@ footer {
         <p class="fade-in" style="margin-left: 35px; margin-top: 25px;"><span></span></p>
     </section>
   <footer> 
+     <div class="footer">
      <p id="footer-text" class="fade-in">© 2024 by <span>Azka Arrodhi.</span> Thoughtfully made, respectfully <span>reserved</span>.
      </p>
+        </div>
   </footer> 
      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
    <script>
@@ -1264,4 +1292,4 @@ document.addEventListener('scroll', runScrollAnimation);
 
 </script>
  </body>
-</html>
+ </html>
