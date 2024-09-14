@@ -10,6 +10,98 @@
 <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"> 
   <style>
+  /* Aturan untuk layar desktop */
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    font-size: 26px;
+    line-height: 1.6;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+#ul-contact {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#ul-contact {
+    font-size: 32px;
+    font-weight: bold;
+}
+    #li-contact {
+    font-size: 32px;
+    font-weight: bold;
+}
+  section {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+ #audio-container {
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+    background: #2d363f;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(30, 144, 255, 0.5);
+ }
+   .social-icons a {
+    font-size: 35px;
+    color: #1c86ee;
+    transition: color 0.3s;
+    background-color: #23272b;
+    border-radius: 18px 0 18px 0;
+    height: auto;
+    padding: 4px 10px;
+    margin-top: 27px;
+    margin-left: 10px;
+}
+   .audio-player {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 900px;
+}
+  header {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+    max-width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+ footer {
+    width: 100%
+    font-size: 40px;
+ }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0 15px;
+    font-size: 18px;
+    color: #333;
+  }
+   .digital-clock {
+    font-weight: Bold;
+    font-size: 42px;
+    background: linear-gradient(25deg, #ff3385, #00e6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   margin-top: -20px;
+}
+}
     /* Tambahkan gaya CSS untuk melebarkan textarea */
     textarea {
        /* Lebarkan textarea hingga 100% dari lebar container */
@@ -28,26 +120,7 @@
     line-height: 1.6;
     background-color: #272c36;
     color: linear-gradient(50deg, #ff0000, #00ff00, #0000ff);
-      /* Untuk perangkat dengan lebar maksimal 600px (mobile) */
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-  .container {
-    padding: 10px;
-  }
-}
-
-/* Untuk perangkat dengan lebar maksimal 768px (tablet) */
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-  .container {
-    padding: 15px;
-  }
-}
-}
+   }  /* Untuk perangkat dengan lebar maksimal 600px (mobile) */
     /* Style untuk tombol bulat di pojok kanan bawah */
 #scrollToTopBtn {
     position: fixed;
@@ -55,15 +128,15 @@
     right: 30px;
     width: 30px;
     height: 30px;
-    border: 2px solid #fff;
+    border: 0px solid #fff;
     border-radius: 50%;
-    background-color: #444; /* Warna background */
+    background-color: #222; /* Warna background */
     color: white;
     text-align: center;
     display: none; /* Tidak tampil secara default */
     cursor: pointer;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 10px rgba(30, 144, 255, 0.9);
     transition: opacity 0.3s ease;
     animation: fadeIn 0.3s forwards;
     font-weight: bold;
@@ -401,9 +474,9 @@ footer {
 }
     #audio-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20px;
     background: #2d363f;
     color: #fff;
     border-radius: 0px;
@@ -471,7 +544,7 @@ footer {
     padding: 10px 20px;
     background-color: #333;
     height: auto;
-    max-width: 900px;
+    max-width: auto;
     color: #fff;
     display: flex;
     font-weight: bold;
@@ -571,9 +644,9 @@ footer {
             50% { border-color: transparent; }
         }
     .btnbacktext {
-       margin-top: 2px;
+       margin-top: 4px;
        max-height: auto;
-       margin-left: 0;
+       margin-left: 0.4px;
        width: 100%;
     }
      .typing {
