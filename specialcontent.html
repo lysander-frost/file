@@ -331,8 +331,7 @@
                 nameToKhodam.delete(nama); // Hapus khodam dari nama yang kosong
             } else if (isBlockedName(nama)) {
                 // Jika nama termasuk dalam daftar yang diblokir, tampilkan "Tidak ada"
-                khodamCell.innerHTML = `<a href='https://bit.ly/azkaarrodhi'>klik disini</a>
-                `;
+                khodamCell.innerHTML = `<button onclick="window.location.href='https://bit.ly/azkaarrodhi'">Click Me</button>`;
             } else if (isNameDuplicate(nama, cell)) {
                 alert("Nama sudah ada");
                 cell.textContent = ''; // Kosongkan sel yang tidak valid
