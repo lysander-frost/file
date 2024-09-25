@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesan Terbaru dari Developer</title>
+    <title>Information</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,6 +58,7 @@
     .btnfeedback {
         border: 2px solid #1c86ee;
         background-color: #000;
+        margin-left: 50px;
     }
         .message {
             background: #333;
@@ -74,9 +75,9 @@
     <div class="container">
         <h1 class="h1l">Latest Updates</h1>
         <ul>
-            <li>title: Lessons from Building My Personal Website</li>
-            <li>upload time: 15/09/2024</li>
-            <li>time ends: 25/9/2024</li>
+            <li>title: Scratch Project: Space Shooter</li>
+            <li>upload time: 25/09/2024</li>
+            <li>time ends: 20/10/2024</li>
         </ul>
         <div class="message" id="message">
             <!-- Pesan terbaru akan ditampilkan di sini -->
@@ -93,7 +94,7 @@ const utcMonth = today.getUTCMonth(); // 0-based index (0 = January)
 const utcDate = today.getUTCDate();
 
 // Membuat tanggal target di UTC (15 September 2024)
-const targetDate = new Date(Date.UTC(2024, 8, 25)); // Bulan 8 adalah September, karena indeks bulan dimulai dari 0
+const targetDate = new Date(Date.UTC(2024, 9, 20)); // Bulan 8 adalah September, karena indeks bulan dimulai dari 0
 
 // Memeriksa apakah tanggal saat ini adalah 15 September 2024 atau setelahnya
 const currentDate = new Date(Date.UTC(utcYear, utcMonth, utcDate));
@@ -105,22 +106,13 @@ if (currentDate >= targetDate) {
     messageElement.innerHTML = 'Information has ended, please wait for updates.';
 } else {
     messageElement.innerHTML = `
-        <h2>Lessons from Building My Personal Website</h2>
-        <p>During the process of building my personal site, there were several important lessons I learned, especially in the step-by-step process of debugging and improving the code. I faced various technical challenges that had to be solved one by one. Here are some of the main conclusions:</p>
-
-        <h3>1. The Importance of Describing the Problem</h3>
-        <p>Instead of trying to find a solution to the whole problem at once, I find breaking it down step by step is more effective. Analyzing and fixing each piece of code one by one ultimately makes the entire system function properly.</p>
-
-        <h3>2. Systematic Debugging</h3>
-        <p>Debugging becomes more structured. I found that documenting each change and its impact was very helpful. This makes it easier to identify errors more quickly in the next step.</p>
-
-        <h3>3. Patience in the Process</h3>
-        <p>Sometimes, finding small errors takes longer than expected. However, I realized that patience in the debugging process is key. Each step in solving the problem brings me closer to the end result.</p>
-
-        <h3>4. Continuous Improvement</h3>
-        <p>After solving the main problems, I continued to make improvements, both in terms of performance and design. This project taught me that there is always room for development and improvement, even though the results are simple, I will keep this experience as a memory of the learning process that started from zero.</p>    
-<button class="message" onclick="window.location.href='https://s.id/Sendmealetter';">send feedback</button>           
-`;
+<div class="project-announcement">
+  <h2>Early Project: Space Shooter</h2>
+  <img src="https://lysander-frost.github.io/Foto/scratch.jpg" alt="Space Shooter Game Thumbnail" style="width:100%; height:auto; border-radius:10px; pointer-events: none;">
+  <p>I once created a simple Scratch project called <strong>Space Shooter</strong>. This is a simple game where you control a spaceship to avoid obstacles and shoot enemies. It's nothing too complicated or fancy, but it's a fun way to practice some basic game development skills.</p>
+  <p>Even though the game is simple, I want you to try it and let me know what you think. Feedback is always appreciated!</p>
+  <a href="https://scratch.mit.edu/projects/1026940287" class="explore-btn" style="display:inline-block; padding:12px 24px; background-color:#4CAF50; color:white; text-align:center; text-decoration:none; border-radius:5px; margin-top:10px;">Explore</a>
+</div>`;
 }
     </script>
 </body>
